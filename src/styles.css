@@ -1,0 +1,39 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.navbar{
+    background: #064663;
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+}
+
+.navbar-container a{
+    display: flex;
+    color: #ECB365;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.navbar-container a:focus
+{
+  /* whatever styles you feel like */
+  background: rgba(179, 48, 67, 0.85);
+}
+.navbar-container a:hover{
+    color: white;
+}
+
+.main-app{
+    background: #041C32;
+    height: 100vh;
+}
