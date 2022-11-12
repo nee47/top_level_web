@@ -1,9 +1,10 @@
 import React from 'react'
+import ShowcaseApp from '../components/ShowcaseApp'
 
 function Home() {
   return (
     <div className='main-app'>
-      HOME
+      <ShowcaseApp/>
     </div>
   )
 }

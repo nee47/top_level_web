@@ -24,11 +24,10 @@ a{
     font-size: 15px;
 }
 
-.navbar-container a:focus
-{
-  /* whatever styles you feel like */
-  background: rgba(179, 48, 67, 0.85);
+.selected-tab{
+    background: rgba(179, 48, 67, 0.85);
 }
+
 .navbar-container a:hover{
     color: white;
 }
@@ -36,4 +35,55 @@ a{
 .main-app{
     background: #041C32;
     height: 100vh;
+}
+
+.sc-app-container{
+    display: flex;
+    position: relative;
+    top: 15px;
+    flex-direction: column;
+    height: 650px;
+    max-width: 500px;
+    margin: 0 auto;
+    background: rgba(250, 250, 250, 0.3);
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.lvlupButton{
+    padding: 15px;
+    border-radius: 3px;
+    color: black;
+    font-weight: 700;
+    background: greenyellow;
+    user-select: none;
+}
+
+.lvlupButton:hover{
+    cursor: pointer;
+}
+
+.lvlupButton:active{
+    background: #15b32d;
+}
+
+.sc-level-info{
+    color: white;
+    font-size: 45px;
+}
+
+.sc-sucess-info{
+    color: #ECB365;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.sc-item{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    padding: 10px;
+    border: 2px black solid;
 }

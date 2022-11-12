@@ -8,6 +8,7 @@ import "./styles.css"
 function App() {
   return (
     <>
+      <script src="generalScripts.js"></script>
       <Router>
         <NavBar />
         <Routes>

@@ -1,27 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useEffect } from 'react'
-
-function Hndler(){
-  useEffect(()=>{
-    console.log("probando al inicio")
-    const tabHome = document.getElementById("home")
-    console.log(tabHome)
-    const tabs = document.querySelector(".navbar-container").children
-    console.log(tabs)
-  }, [])
-}
 
 export default function NavBar() {
   
-  
+  const [currentTab, setCurrentTab] = useState(1);
+
+  const toggleTab = (index)=>{
+    setCurrentTab(index);
+  }
+
   return (
     <>
       <nav className='navbar'>
         <div className='navbar-container'>
-          <Link onClick={Hndler} id='home' to='/Home'>Inicio</Link>
-          <Link to='/About'>Acerca</Link>
-          <Link to='/MyUser'>Mi Usuario</Link>
+          <Link className={currentTab === 1 ? "selected-tab" : ""} onClick={()=>{toggleTab(1)}} id='home' to='/Home'>Inicio</Link>
+          <Link className={currentTab === 2 ? "selected-tab" : ""} onClick={()=>{toggleTab(2)}} to='/About'>Acerca</Link>
+          <Link className={currentTab === 3 ? "selected-tab" : ""} onClick={()=>{toggleTab(3)}} to='/MyUser'>Mi Usuario</Link>
         </div>
       </nav>
     </>
