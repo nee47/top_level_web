@@ -9,6 +9,8 @@ a{
 
 .navbar{
     background: #064663;
+    display: flex;
+    justify-content: center;
 }
 
 .navbar-container{
@@ -32,6 +34,21 @@ a{
     color: white;
 }
 
+.navbar__buttons{
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: 5px;
+    right: 2%;
+}
+
+.navbar__button{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: 2px white solid;
+    padding: 8px;
+}
 .main-app{
     background: #041C32;
     height: 100vh;

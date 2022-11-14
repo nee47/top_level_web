@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export default function NavBar() {
   
   const [currentTab, setCurrentTab] = useState(1);
-
+  const logged = true;
   const toggleTab = (index)=>{
     setCurrentTab(index);
   }
@@ -17,6 +17,15 @@ export default function NavBar() {
           <Link className={currentTab === 2 ? "selected-tab" : ""} onClick={()=>{toggleTab(2)}} to='/About'>Acerca</Link>
           <Link className={currentTab === 3 ? "selected-tab" : ""} onClick={()=>{toggleTab(3)}} to='/MyUser'>Mi Usuario</Link>
         </div>
+        
+        {
+            logged ? console.log("YA ESTA LOGGEADO") :
+            <div className="navbar__buttons">
+              <Link className="navbar__button" to='/Login'>Acceder</Link>
+              <Link className="navbar__button" to='/Register'>Registrarse</Link>
+            </div>
+        }
+        
       </nav>
     </>
   )
