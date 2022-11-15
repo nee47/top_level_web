@@ -1,6 +1,7 @@
 body{
     padding: 0;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 a{
@@ -14,7 +15,7 @@ a{
 }
 
 .navbar-container{
-    display: flex;
+    display: none;
     justify-content: center;
     gap: 14px;
 }
@@ -146,4 +147,50 @@ a{
     border: 2px black solid;
     max-width: 200px;
     object-fit: cover;
+}
+
+.login-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/837b15aa-d8ff-4bc5-a7e5-63b70ad4c30d/dfhx6l7-9a439f3d-18cf-45e8-953a-be25d769bc5b.jpg/v1/fill/w_1192,h_670,q_70,strp/above_the_abyss_by_ekud_dfhx6l7-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjE2MCIsInBhdGgiOiJcL2ZcLzgzN2IxNWFhLWQ4ZmYtNGJjNS1hN2U1LTYzYjcwYWQ0YzMwZFwvZGZoeDZsNy05YTQzOWYzZC0xOGNmLTQ1ZTgtOTUzYS1iZTI1ZDc2OWJjNWIuanBnIiwid2lkdGgiOiI8PTM4NDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.ZM6fmMFntZ5U1nn7xSnc2ZsUEigRJYO6eIepPyjoxCA);
+}
+
+.form{
+    display: flex;
+    gap: 6px;
+    background: whitesmoke;
+    color: black;
+    flex-direction: column;
+    width: 50%;
+    height: 80%;
+    max-height: 550px;
+    max-width: 420px;
+    padding: 30px;
+    font-size: 20px;
+}
+
+.form input{
+    padding: 15px 8px;
+    background-color: rgb(229, 226, 223);
+    border: none;
+    font-size: 15px;
+}
+
+.form input::placeholder{
+    color: #7a8187;
+}
+.form button{
+    align-self: center;
+    margin-top: 65px;
+    padding: 10px;
+    width: 100px;
+    background: #3084ac;
+    border: none;
+}
+
+.form label:first-child{
+    text-align: center;
+    margin-bottom: 100px;
 }
