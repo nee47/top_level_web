@@ -20,7 +20,7 @@ function Register() {
     }
 
   return (
-    <div className='login-container'>
+    <div className='form-container'>
       <form className='form' onSubmit={handleSubmit}>
         <label className='form__title'>TOP LEVEL</label>
 
