@@ -18,6 +18,7 @@ export const useAuth = ()=>{
 export function FirebaseProvider({ children }){
 
     const [userState, setUserState] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     const register = (email, password)=>{
         createUserWithEmailAndPassword(auth, email, password);
@@ -28,10 +29,19 @@ export function FirebaseProvider({ children }){
     
     useEffect(()=>{
         onAuthStateChanged(auth, currentUser =>{
-            setUserState(currentUser);
-            console.log(userState);
+            if(currentUser){
+                setUserState(currentUser);
+                setLoading(false);
+            }
         })
-    },[userState]);
+        const timeout = setTimeout(()=>{
+            setLoading(false);
+        }, 700);
 
-    return <authContext.Provider value={{register, login, userState}}>{children}</authContext.Provider>
+        return () => {
+            clearTimeout(timeout);
+          };
+    },[]);
+
+    return <authContext.Provider value={{register, login, userState, loading}}>{children}</authContext.Provider>
 }

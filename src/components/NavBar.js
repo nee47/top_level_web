@@ -23,6 +23,7 @@ export default function NavBar() {
             <div className="navbar__buttons">
               <Link className="navbar__button" to='/Login'>Acceder</Link>
               <Link className="navbar__button" to='/Register'>Registrarse</Link>
+              <Link className="navbar__button" to='/home'>HOME</Link>
             </div>
         }
         
