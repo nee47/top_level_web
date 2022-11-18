@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useAuth } from '../context/authContext';
 
 export default function NavBar() {
   
   const [currentTab, setCurrentTab] = useState(1);
-  const logged = false;
+  const {userState} = useAuth()
+  const logged = userState != null;
   const toggleTab = (index)=>{
     setCurrentTab(index);
   }
@@ -12,18 +14,18 @@ export default function NavBar() {
   return (
     <>
       <nav className='navbar'>
-        <div className='navbar-container'>
-          <Link className={currentTab === 1 ? "selected-tab" : ""} onClick={()=>{toggleTab(1)}} id='home' to='/'>Inicio</Link>
-          <Link className={currentTab === 2 ? "selected-tab" : ""} onClick={()=>{toggleTab(2)}} to='/'>Acerca</Link>
-          <Link className={currentTab === 3 ? "selected-tab" : ""} onClick={()=>{toggleTab(3)}} to='/'>Mi Usuario</Link>
-        </div>
+        
         
         {
-            logged ? console.log("YA ESTA LOGGEADO") :
+            logged ?
+            <div className='navbar-container'>
+              <Link className={currentTab === 1 ? "selected-tab" : ""} onClick={()=>{toggleTab(1)}} id='home' to='/'>Inicio</Link>
+              <Link className={currentTab === 2 ? "selected-tab" : ""} onClick={()=>{toggleTab(2)}} to='/app'>Jugar</Link>
+              <Link className={currentTab === 3 ? "selected-tab" : ""} onClick={()=>{toggleTab(3)}} to='/'>Mi Usuario</Link>
+            </div>:
             <div className="navbar__buttons">
               <Link className="navbar__button" to='/Login'>Acceder</Link>
               <Link className="navbar__button" to='/Register'>Registrarse</Link>
-              <Link className="navbar__button" to='/home'>HOME</Link>
             </div>
         }
         

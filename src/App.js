@@ -12,6 +12,8 @@ import Login from "./pages/Login"
 import "./styles.css"
 import MainApp from "./pages/MainApp";
 import { useAuth } from "./context/authContext";
+import NotFound from "./components/NotFound"
+import Loading from "./components/Loading";
 
 const ProtectedRoute = ({
   user,
@@ -28,7 +30,7 @@ const ProtectedRoute = ({
 function App() {
   const {userState, loading} = useAuth() || {};
   if(loading){
-    return (<h1>CARGANDO...</h1>)
+    return (<Loading/>)
   }else
   return (
     <>      
@@ -37,13 +39,14 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route element={<ProtectedRoute user={userState}/>}>
-            <Route path="/home" element={<MainApp/>}></Route>
+            <Route path="/app" element={<MainApp/>}></Route>
           </Route>
 
           <Route element={<ProtectedRoute user={userState==null}/>}>
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
           </Route>
+          <Route path="404" element={<NotFound/>}/>
         </Routes>  
       </Router>
     </>
