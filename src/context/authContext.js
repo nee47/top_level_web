@@ -32,6 +32,7 @@ export function FirebaseProvider({ children }){
             if(currentUser){
                 setUserState(currentUser);
                 setLoading(false);
+                console.log(currentUser);
             }
         })
         const timeout = setTimeout(()=>{

@@ -14,6 +14,7 @@ import MainApp from "./pages/MainApp";
 import { useAuth } from "./context/authContext";
 import NotFound from "./components/NotFound"
 import Loading from "./components/Loading";
+import MyUser from "./pages/MyUser";
 
 const ProtectedRoute = ({
   user,
@@ -47,6 +48,7 @@ function App() {
             <Route path="/register" element={<Register />} />
           </Route>
           <Route path="404" element={<NotFound/>}/>
+          <Route path="user" element={<MyUser/>}/>
         </Routes>  
       </Router>
     </>
