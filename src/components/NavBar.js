@@ -23,6 +23,7 @@ export default function NavBar() {
               <Link className={currentTab === 3 ? "selected-tab" : ""} onClick={()=>{toggleTab(3)}} to='/user'>Mi Usuario</Link>
             </div>:
             <div className="navbar__buttons">
+              <Link className="navbar__button" to='/'></Link>
               <Link className="navbar__button" to='/Login'>Acceder</Link>
               <Link className="navbar__button" to='/Register'>Registrarse</Link>
             </div>

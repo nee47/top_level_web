@@ -50,6 +50,14 @@ a{
     border: 2px white solid;
     padding: 8px;
 }
+
+.navbar__button:first-child{
+    background-color: white;
+    background-image: url("https://img.icons8.com/ios-glyphs/512/home-page.png");
+    background-size: cover;
+    padding: 20px;
+}
+
 .main-app{
     background: #041C32;
     height: 100vh;
