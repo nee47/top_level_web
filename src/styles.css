@@ -212,3 +212,17 @@ a{
     text-align: center;
     margin-bottom: 100px;
 }
+
+.logoutButton{
+    display: inline-block;
+    background: #7a8187;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    user-select: none;
+    cursor: pointer;
+}
+
+.logoutButton:active{
+    background: #4b4f53;
+}

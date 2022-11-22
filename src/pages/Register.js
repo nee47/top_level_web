@@ -19,6 +19,10 @@ function Register() {
         console.log(user);
     }
 
+    const validatePw = (pw, rpw)=>{
+      return pw === rpw;
+    }
+
   return (
     <div className='form-container'>
       <form className='form' onSubmit={handleSubmit}>

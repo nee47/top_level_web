@@ -41,6 +41,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route element={<ProtectedRoute user={userState}/>}>
             <Route path="/app" element={<MainApp/>}></Route>
+            <Route path="user" element={<MyUser/>}/>
           </Route>
 
           <Route element={<ProtectedRoute user={userState==null}/>}>
@@ -48,7 +49,6 @@ function App() {
             <Route path="/register" element={<Register />} />
           </Route>
           <Route path="404" element={<NotFound/>}/>
-          <Route path="user" element={<MyUser/>}/>
         </Routes>  
       </Router>
     </>
