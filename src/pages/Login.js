@@ -23,7 +23,7 @@ function Login() {
       
       try{
         await login(user.email, user.password);
-          navigate('/'); 
+          navigate('/user'); 
       } catch (error){
         console.log(error);
       }
