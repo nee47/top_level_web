@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 function MyUser() {
 
   const navigate = useNavigate();
-  const {logout} = useAuth();
+  const {logout, userState} = useAuth();
 
   const handleLogOut = ()=>{
     try {
@@ -17,8 +17,12 @@ function MyUser() {
   }
 
   return (
-    <div>
-      <div className='logoutButton' onClick={handleLogOut}>LOGOUT</div>
+    <div className='userinfo-container'>
+      <div className='emailinfo'>EMAIL: {userState.email}</div>
+      <div>
+        <div>NICKNAME: </div>
+      </div>
+      <div className='logoutbutton' onClick={handleLogOut}>LOGOUT</div>
     </div>
   )
 }

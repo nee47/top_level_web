@@ -10,9 +10,16 @@ a{
 }
 
 .navbar{
-    background: #064663;
     display: flex;
-    justify-content: center;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.logo{
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .navbar-container{
@@ -30,6 +37,7 @@ a{
 
 .selected-tab{
     background: rgba(179, 48, 67, 0.85);
+    border-radius: 4px;
 }
 
 .navbar-container a:hover{
@@ -60,7 +68,7 @@ a{
 }
 
 .main-app{
-    background: #041C32;
+    background-color: #2c2c2d;
     height: 100vh;
 }
 
@@ -197,7 +205,7 @@ a{
 }
 .form button{
     align-self: center;
-    margin-top: 65px;
+    margin-top: 45px;
     padding: 10px;
     width: 100px;
     background: #3084ac;
@@ -214,7 +222,39 @@ a{
     margin-bottom: 100px;
 }
 
-.logoutButton{
+.sign-result{
+    opacity: 0;  
+    width: 200px;
+    height: 60px;
+    margin-top: 10px;
+    align-self: center;
+    background: #dc3636;
+    font-size: 15px;
+    padding: 0 5px;
+    line-height: 60px;
+    border-radius: 3px;
+    color: white;
+}
+
+.show{
+    opacity: 1;
+} 
+
+/* user info */
+.userinfo-container{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 70%;
+    margin: auto;
+    gap: 15px;
+}
+
+.emailinfo{
+
+}
+
+.logoutbutton{
     display: inline-block;
     background: #7a8187;
     padding: 10px;
@@ -222,8 +262,9 @@ a{
     color: white;
     user-select: none;
     cursor: pointer;
+    text-align: center;
 }
 
-.logoutButton:active{
+.logoutbutton:active{
     background: #4b4f53;
 }

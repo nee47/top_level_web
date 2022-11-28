@@ -52,6 +52,7 @@ function Login() {
           placeholder='**********' 
           onChange={handleInput}/>
 
+        <div className='sign-result'></div>
         <button>Aceptar</button>
 
       </form>

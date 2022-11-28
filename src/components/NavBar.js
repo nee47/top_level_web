@@ -14,7 +14,7 @@ export default function NavBar() {
   return (
     <>
       <nav className='navbar'>
-        
+        <div className='logo'>Top Level</div>
         {
             logged ?
             <div className='navbar-container'>
