@@ -5,6 +5,10 @@ body{
     background-color: #2c2c2d;
 }
 
+#root{
+    height: 100vh;
+}
+
 a{
     text-decoration: none;
 }
@@ -267,4 +271,34 @@ a{
 
 .logoutbutton:active{
     background: #4b4f53;
+}
+
+.app{
+    height: 100%;
+}
+
+.app-buttons{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+}
+
+.app-buttons > div{
+    text-align: center;
+    line-height: 150px;
+    color: orange;
+    background: black;
+    flex-basis: 250px;
+    min-width: 100px;
+    height: 150px;
+    font-size: 30px;
+    border-radius: 10px;
+    user-select: none;
+}
+
+.app-buttons > div:hover{
+ background: rgb(106, 106, 106);   
 }
